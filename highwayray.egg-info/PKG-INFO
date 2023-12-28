@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: highwayray
+Version: 0.0.0
+License: Apache 2.0
+Requires-Dist: ray[all]==2.9.0
+Requires-Dist: gymnasium==0.28.1
+Requires-Dist: tensorboardX==2.6.2.2
+Requires-Dist: highway-env

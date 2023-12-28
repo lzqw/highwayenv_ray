@@ -1,0 +1,13 @@
+{
+  "callbacks": "<class 'ray.rllib.algorithms.callbacks.DefaultCallbacks'>",
+  "env": "roundabout-v0",
+  "env_config": {
+    "render_mode": "rgb_array"
+  },
+  "log_level": "INFO",
+  "num_cpus_per_worker": 1,
+  "num_gpus": 0.2,
+  "num_rollout_workers": 1,
+  "seed": 0,
+  "train_batch_size": 2000
+}

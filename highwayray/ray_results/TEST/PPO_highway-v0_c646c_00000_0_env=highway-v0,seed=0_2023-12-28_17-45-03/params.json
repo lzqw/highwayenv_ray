@@ -1,0 +1,12 @@
+{
+  "callbacks": "<class 'ray.rllib.algorithms.callbacks.DefaultCallbacks'>",
+  "env": "highway-v0",
+  "env_config": {
+    "render_mode": "rgb_array"
+  },
+  "log_level": "INFO",
+  "num_gpus": 0.1,
+  "num_rollout_workers": 6,
+  "seed": 0,
+  "train_batch_size": 2000
+}
