@@ -1,0 +1,66 @@
+Failure # 1 (occurred at 2024-01-23_21-45-19)
+The actor died because of an error raised in its creation task, [36mray::PPO.__init__()[39m (pid=1791081, ip=192.168.4.1, actor_id=feeff0c09f69f4e5950fe72b01000000, repr=PPO)
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/evaluation/worker_set.py", line 229, in _setup
+    self.add_workers(
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/evaluation/worker_set.py", line 616, in add_workers
+    raise result.get()
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/utils/actor_manager.py", line 487, in __fetch_result
+    result = ray.get(r)
+ray.exceptions.RayActorError: The actor died because of an error raised in its creation task, [36mray::RolloutWorker.__init__()[39m (pid=1791257, ip=192.168.4.1, actor_id=66838d584600706c27e8db8e01000000, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x7f99b07d8910>)
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/evaluation/rollout_worker.py", line 407, in __init__
+    self.env = env_creator(copy.deepcopy(self.env_context))
+  File "/home/lzqw/opt/Highway_ray/highwayray/utils/env_wrappers.py", line 133, in <lambda>
+    register_env(env_name, lambda config: MA(config))
+  File "/home/lzqw/opt/Highway_ray/highwayray/utils/env_wrappers.py", line 34, in __init__
+    env_class.__init__(self, config, *args, **kwargs)
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/highway_env/envs/common/abstract.py", line 57, in __init__
+    self.define_spaces()
+  File "/home/lzqw/opt/Highway_ray/highwayray/utils/env_wrappers.py", line 49, in define_spaces
+    new_shape=(self.observation_space.shape[1],self.observation_space.shape[2],
+IndexError: tuple index out of range
+
+During handling of the above exception, another exception occurred:
+
+[36mray::PPO.__init__()[39m (pid=1791081, ip=192.168.4.1, actor_id=feeff0c09f69f4e5950fe72b01000000, repr=PPO)
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/algorithms/algorithm.py", line 516, in __init__
+    super().__init__(
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/tune/trainable/trainable.py", line 161, in __init__
+    self.setup(copy.deepcopy(self.config))
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/algorithms/algorithm.py", line 638, in setup
+    self.workers = WorkerSet(
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/evaluation/worker_set.py", line 181, in __init__
+    raise e.args[0].args[2]
+IndexError: tuple index out of range
+Failure # 2 (occurred at 2024-01-23_21-55-51)
+The actor died because of an error raised in its creation task, [36mray::PPO.__init__()[39m (pid=1800792, ip=192.168.4.1, actor_id=8f836140c0c378828831455e01000000, repr=PPO)
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/evaluation/worker_set.py", line 229, in _setup
+    self.add_workers(
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/evaluation/worker_set.py", line 616, in add_workers
+    raise result.get()
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/utils/actor_manager.py", line 487, in __fetch_result
+    result = ray.get(r)
+ray.exceptions.RayActorError: The actor died because of an error raised in its creation task, [36mray::RolloutWorker.__init__()[39m (pid=1800879, ip=192.168.4.1, actor_id=dda5c25387b2758135d2530101000000, repr=<ray.rllib.evaluation.rollout_worker.RolloutWorker object at 0x7f49c69547c0>)
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/evaluation/rollout_worker.py", line 407, in __init__
+    self.env = env_creator(copy.deepcopy(self.env_context))
+  File "/home/lzqw/opt/Highway_ray/highwayray/utils/env_wrappers.py", line 133, in <lambda>
+    register_env(env_name, lambda config: MA(config))
+  File "/home/lzqw/opt/Highway_ray/highwayray/utils/env_wrappers.py", line 34, in __init__
+    env_class.__init__(self, config, *args, **kwargs)
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/highway_env/envs/common/abstract.py", line 57, in __init__
+    self.define_spaces()
+  File "/home/lzqw/opt/Highway_ray/highwayray/utils/env_wrappers.py", line 49, in define_spaces
+    new_shape=(self.observation_space.shape[1],self.observation_space.shape[2],
+IndexError: tuple index out of range
+
+During handling of the above exception, another exception occurred:
+
+[36mray::PPO.__init__()[39m (pid=1800792, ip=192.168.4.1, actor_id=8f836140c0c378828831455e01000000, repr=PPO)
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/algorithms/algorithm.py", line 516, in __init__
+    super().__init__(
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/tune/trainable/trainable.py", line 161, in __init__
+    self.setup(copy.deepcopy(self.config))
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/algorithms/algorithm.py", line 638, in setup
+    self.workers = WorkerSet(
+  File "/home/lzqw/anaconda3/envs/highwayenvray/lib/python3.9/site-packages/ray/rllib/evaluation/worker_set.py", line 181, in __init__
+    raise e.args[0].args[2]
+IndexError: tuple index out of range

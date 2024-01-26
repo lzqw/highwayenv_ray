@@ -207,16 +207,16 @@ def initialize_ray(local_mode=False, num_gpus=None, test_mode=False, **kwargs):
 def get_train_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("--exp-name", type=str, default="")
-    parser.add_argument("--num-gpus", type=int, default=1)     #可以使用的总GPU数量
+    parser.add_argument("--num-gpus", type=int, default=1)  # 可以使用的总GPU数量
     parser.add_argument("--num-seeds", type=int, default=3)
-    parser.add_argument("--num-cpus-per-worker", type=float, default=1)  #每个roll out worker对应的cpu数量
-    parser.add_argument("--num-gpus-per-trial", type=float, default=0.2)
+    parser.add_argument("--num-cpus-per-worker", type=float, default=1)  # 每个roll out worker对应的cpu数量
+    parser.add_argument("--num-gpus-per-trial", type=float, default=0.5)
     parser.add_argument("--test", type=bool, default=False)
-    parser.add_argument("--workers",type=int,default=1)
-    parser.add_argument("--train_batch_size",type=int,default=2000)
-    parser.add_argument("--framework",choices=['tf','tf2','torch'],default='torch')
+    parser.add_argument("--workers", type=int, default=2)
+    parser.add_argument("--train_batch_size", type=int, default=2000)
+    # parser.add_argument("--rollout_fragment_length", type=int, default=200)
+    parser.add_argument("--framework", choices=['tf', 'tf2', 'torch'], default='torch')
     return parser
-
 
 def setup_logger(debug=False):
     import logging

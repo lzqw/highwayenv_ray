@@ -10,7 +10,9 @@ setup(
     "ray[all]==2.9.0",
     "gymnasium==0.28.1",
     "tensorboardX==2.6.2.2",
-    "highway-env"
+    "highway-env",
+    "chardet",
+    "utils"
     ],
     license="Apache 2.0",
 )

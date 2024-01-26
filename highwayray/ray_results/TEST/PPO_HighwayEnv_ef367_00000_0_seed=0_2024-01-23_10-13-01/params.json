@@ -1,0 +1,44 @@
+{
+  "callbacks": "<class 'ray.rllib.algorithms.callbacks.DefaultCallbacks'>",
+  "env": "HighwayEnv",
+  "env_config": {
+    "action": {
+      "lateral": true,
+      "longitudinal": true,
+      "steering_range": [
+        -1.0471975511965976,
+        1.0471975511965976
+      ],
+      "type": "ContinuousAction"
+    },
+    "collision_reward": -3,
+    "forward_reward": 2,
+    "high_speed_reward": 1,
+    "observation": {
+      "observation_shape": [
+        240,
+        320
+      ],
+      "scaling": 1.75,
+      "stack_size": 1,
+      "type": "GrayscaleObservation",
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ]
+    },
+    "offroad_terminal": true,
+    "on_road_reward": 0.2,
+    "policy_frequency": 15,
+    "render_mode": "rgb_array",
+    "right_lane_reward": 0.5,
+    "simulation_frequency": 15
+  },
+  "log_level": "INFO",
+  "num_cpus_per_worker": 1,
+  "num_gpus": 1,
+  "num_rollout_workers": 50,
+  "seed": 0,
+  "train_batch_size": 10000
+}
